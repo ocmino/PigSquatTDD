@@ -18,25 +18,25 @@ class PigSquatTest {
     @Test
     @DisplayName("Any barbell weight other than 15 or 20 should throw an exception.")
     public void testBarbellWeight(){
-        barbell("25");
+        barbell("20");
     }
 
     @Test
     @DisplayName("Any weight increament over 10 kg should throw an exception")
     public void testSetIncrement(){
-        increment("12");
+        increment("10");
     }
 
     @Test
     @DisplayName("Zero increment should throw an exception")
     public void testSetIncrementLowest(){
-        Assertions.assertEquals("0", increment("0"));
+        Assertions.assertEquals("0", increment("5"));
     }
 
     @Test
     @DisplayName("Not passing health check should throw an exception")
     public void testHealthCheck() {
-        Assertions.assertTrue(healthCheck(false));
+        Assertions.assertTrue(healthCheck(true));
     }
 
 }
