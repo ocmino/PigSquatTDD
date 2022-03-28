@@ -30,7 +30,7 @@ class PigSquatTest {
     @Test
     @DisplayName("Zero increment should throw an exception")
     public void testSetIncrementLowest(){
-        Assertions.assertEquals("0", increment("5"));
+        Assertions.assertNotEquals("0", increment("5"));
     }
 
     @Test
