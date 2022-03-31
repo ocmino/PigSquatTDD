@@ -1,9 +1,6 @@
 package se.jonathan;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static se.jonathan.PigSquat.*;
@@ -18,25 +15,25 @@ class PigSquatTest {
     @Test
     @DisplayName("Any barbell weight other than 15 or 20 should throw an exception.")
     public void testBarbellWeight(){
-        barbell("20");
+        barbell("25");
     }
 
     @Test
     @DisplayName("Any weight increament over 10 kg should throw an exception")
     public void testSetIncrement(){
-        increment("10");
+        increment("15");
     }
 
     @Test
     @DisplayName("Zero increment should throw an exception")
     public void testSetIncrementLowest(){
-        Assertions.assertNotEquals("0", increment("5"));
+        Assertions.assertNotEquals("0", increment("0"));
     }
 
     @Test
     @DisplayName("Not passing health check should throw an exception")
     public void testHealthCheck() {
-        Assertions.assertTrue(healthCheck(true));
+        Assertions.assertTrue(healthCheck(false));
     }
 
 }

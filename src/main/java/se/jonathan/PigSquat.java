@@ -25,7 +25,7 @@ public class PigSquat {
             throw new RuntimeException("Do not go beyond 10 kg for weight increment.");
         }
         else if(increment == 0){
-            throw new RuntimeException("You cannot enter an increment value lower than 1.");
+            throw new RuntimeException("You can't enter an increment value lower than 1.");
         }
         else {
             System.out.println("You picked a " + increment + " kg increment each set.");
@@ -33,5 +33,5 @@ public class PigSquat {
         return increment;
     }
 
-
+//TODO
 }
