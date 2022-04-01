@@ -8,9 +8,9 @@ import static se.jonathan.PigSquat.*;
 class PigSquatTest {
 
 
-
     @BeforeEach
     public void newTest(){
+        PigSquat pigsquat = new PigSquat();
         System.out.println("Test result:");
     }
 
@@ -24,7 +24,7 @@ class PigSquatTest {
 
 
     @Test
-    @DisplayName("Any barbell weight other than 15 or 20 should throw an exception.")
+    @DisplayName("Any barbell weight other than 15 or 20 kg should throw an exception.")
     public void testBarbellWeight(){
         barbell("25");
     }
