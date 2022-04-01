@@ -24,7 +24,7 @@ public class PigSquat {
         if(increment > 10){
             throw new RuntimeException("Do not go beyond 10 kg for weight increment.");
         }
-        else if(increment == 0){
+        else if(increment < 1){
             throw new RuntimeException("You can't enter an increment value lower than 1.");
         }
         else {
