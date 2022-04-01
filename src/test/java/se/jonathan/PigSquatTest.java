@@ -12,6 +12,11 @@ class PigSquatTest {
         System.out.println("Test result:");
     }
 
+    @AfterEach
+    public void tearDown() {
+        System.out.println("Test completed...");
+    }
+
     @Test
     @DisplayName("Any barbell weight other than 15 or 20 should throw an exception.")
     public void testBarbellWeight(){
